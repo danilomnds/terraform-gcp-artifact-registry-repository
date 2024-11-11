@@ -1,7 +1,7 @@
 # Module - Artifact Registry Repository
 [![COE](https://img.shields.io/badge/Created%20By-CCoE-blue)]()
 [![HCL](https://img.shields.io/badge/language-HCL-blueviolet)](https://www.terraform.io/)
-[![OCI](https://img.shields.io/badge/provider-OCI-red)](https://registry.terraform.io/providers/oracle/oci/latest)
+[![GCP](https://img.shields.io/badge/provider-GCP-green)](https://registry.terraform.io/providers/hashicorp/google/latest)
 
 Module developed to standardize the creation of Artifact Registry Repository.
 
@@ -19,7 +19,7 @@ Note: The `?ref=***` refers a tag on the git module repo.
 ## Default use case
 ```hcl
 module "repo" {    
-  source = "git::https://github.com/danilomnds/terraform-gcp-module-artifact-registry-repository?ref=v1.0.0"
+  source = "git::https://github.com/danilomnds/terraform-gcp-artifact-registry-repository?ref=v1.0.0"
   project = "project_id"
   repository_id = "repo name"
   location = "<southamerica-east1>"
@@ -51,7 +51,7 @@ output "id" {
 ## Default use case plus RBAC
 ```hcl
 module "repo" {    
-  source = "git::https://github.com/danilomnds/terraform-gcp-module-artifact-registry-repository?ref=v1.0.0"
+  source = "git::https://github.com/danilomnds/terraform-gcp-artifact-registry-repository?ref=v1.0.0"
   project = "project_id"
   repository_id = "repo name"
   location = "<southamerica-east1>"
