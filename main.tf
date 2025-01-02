@@ -154,9 +154,10 @@ resource "google_artifact_registry_repository" "repository" {
   }
 }
 
-resource "google_project_iam_binding" "repoAdmin" {
-  count   = length(var.members) == 0 ? 0 : 1
-  project = var.project
-  role    = "roles/artifactregistry.repoAdmin"
-  members = var.members
+resource "google_project_iam_member" "repoAdmin" {
+  depends_on = [ google_artifact_registry_repository.repository ]
+  for_each   = { for member in var.members : member => member }
+  project    = var.project
+  role       = "roles/artifactregistry.repoAdmin"
+  member     = each.value
 }

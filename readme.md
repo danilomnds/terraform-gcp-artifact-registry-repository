@@ -9,7 +9,7 @@ Module developed to standardize the creation of Artifact Registry Repository.
 
 | Module Version | Terraform Version | Google Version     |
 |----------------|-------------------| ------------------ |
-| v1.0.0         | v1.9.8            | 6.7.0              |
+| v1.0.0         | v1.10.2           | 6.14.1             |
 
 ## Specifying a version
 
